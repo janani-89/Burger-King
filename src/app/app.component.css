@@ -1,0 +1,33 @@
+body{
+	margin-left:150px;
+	margin-right:150px;
+}
+
+#logo{
+	width:100px;
+	height:85px;
+	float:left;
+
+}
+#bag{
+	text-align: right;
+	word-spacing: 10px;
+	float:right;
+	font-weight: bold;
+}
+#login{
+	height:85px;
+	width:50px;
+
+}
+#first{
+		font-weight: bold;
+
+}
+
+#headerdiv{
+		border: 1px solid black;
+		border-top: 	none;
+		margin-top: -20px;
+		background-color: 	black;
+}

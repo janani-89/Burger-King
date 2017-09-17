@@ -1,0 +1,11 @@
+#sign{
+	float:right;
+	font-weight: bold;
+	width:130px;
+}
+#registerr{
+	float:right;
+	background-color: orange;
+	color:white;
+	font-weight: bold;
+}
