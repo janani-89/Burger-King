@@ -1,22 +1,26 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default ">
   <div class="container-fluid">
-    <span class="nav-toggle" (click)="toggleNav = !toggleNav;" [ngClass]="{'is-active':toggleNav }">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
-
-    <ul class="nav navbar-nav navbar-right" id="first" [ngClass]="{'is-active':toggleNav }">
-       		<li ><a routerLink = "menu" class="nav-item r-item" id="menu">MENU</a></li>
-        	<li><a routerLink = "login" class="nav-item r-item">SIGN IN</a></li>
-        	<li><a routerLink = "register" class="nav-item r-item">REGISTER</a></li>
-    </ul>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" (click)="toggleState()" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse " id="first" [ngClass]="{'in':isIn }">
+      <ul class="nav navbar-nav navbar-right " >
+            <li ><a routerLink = "menu" class="nav-item " id="menu" routerLinkActive = "active">MENU</a></li>
+            <li><a routerLink = "login" class="nav-item " routerLinkActive = "active">SIGN IN</a></li>
+            <li><a routerLink = "register" class="nav-item" routerLinkActive = "active">REGISTER</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 <div class="container-fluid text-center" id="headerdiv">
     <div class="row content ">
       <div class="col-sm-4">
-        <img id="logo" src = "http://3.bp.blogspot.com/_7yB-eeGviiI/TMxCxT97T8I/AAAAAAAACmA/Pyejw46kLIg/s1600/burger+king+logo.jpg" />
+       <a routerLink=""> <img id="logo" src = "http://3.bp.blogspot.com/_7yB-eeGviiI/TMxCxT97T8I/AAAAAAAACmA/Pyejw46kLIg/s1600/burger+king+logo.jpg" /> </a>
       </div>
       <div class="col-sm-4" style="padding-top:   20px;">
 

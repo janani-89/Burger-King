@@ -6,21 +6,28 @@
 <div class="container-fluid text-center" style="margin-left:-15px;">
   <div class="row content" >
     <div class="col-sm-2 sidenav">
-      <ul class="list"  ng-repeat="menuItem in menuItems">
-          <li class="menulist"><a href=" #" style="color:black;text-transform: uppercase; font-weight:bold;" >{{menuItem.name}}</a></li>
-
-      </ul>
-    </div>
+        <button type="button" class="showgraphSidebar ? 'col-xs-9' : 'col-xs-12'"  (click)="toggle()" >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="showgraphSidebar ? 'col-xs-3' : 'hidden'" [ngClass]="{'in':isIn }">
+            <ul class="list"  *ngFor = "let menu of menus"><!--list menu from arry of menu items -->
+              <li class="menulist"><a href=" #" style="color:black;text-transform: uppercase; font-weight:bold;" >{{menu.name}}</a></li>
+            </ul>
+          </div>
+      </div>
 
 <div class="col-sm-8 text-left" style="margin-left:100px;">
-  <div *ngFor = "let burger of burgers" class="col-sm-6">
+  <div *ngFor = "let burger of burgers" class="col-sm-6"><!-- iterate to display all burgers in the list -->
     <div class="thumbnail">
       <img src="{{burger.src}}" style="width:150px; height:150px;" alt="burger image" />
       <br/>
       <span style="font-size:10px; padding-top:10px;">{{burger.name}}</span>
       <BR/> <br/>
 
-      <button type="submit" class="btn btn-default" id="store" style= " background-color: orange ; color:white " ><a href="#!addon"> <span >ADD TO BAG + </span> </a></button>
+      <button type="submit" class="btn btn-default" id="store" style= " background-color: orange ; color:white " (click) = "addBag(burger.name)"> <span >ADD TO BAG + </span></button>
       <br/>  <br/>
       <hr/>
     </div>

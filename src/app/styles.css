@@ -1,9 +1,4 @@
 
-body{
-	margin-left:150px;
-	margin-right:150px;
-}
-
 #logo{
 	width:100px;
 	height:85px;
@@ -27,7 +22,7 @@ body{
 }
 .list{
 	list-style-type: none;
-	border-right: : 1px solid #555;
+	border-right: 1px solid #555;
 
 }
 #headerdiv{
